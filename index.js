@@ -57,7 +57,7 @@ bot.on('message', async (msg) => {
 
 const PORT = 8000;
 
-app.post('web-data', async (req, res) => {
+app.post('/web-data', async (req, res) => {
     const {queryId, products, totalPrice} = req.body;
     console.log(req.body)
 
