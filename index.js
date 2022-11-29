@@ -57,6 +57,10 @@ bot.on('message', async (msg) => {
 
 const PORT = 8000;
 
+app.get('/test', () => {
+    console.log('get ok')
+})
+
 app.post('/web-data', async (req, res) => {
     const {queryId, products, totalPrice} = req.body;
     console.log(req.body)
@@ -86,4 +90,4 @@ app.post('/web-data', async (req, res) => {
     }
 })
 
-app.listen(PORT, () => console.log('server start om port' + PORT))
+app.listen(PORT, () => console.log('server start on port ' + PORT))
