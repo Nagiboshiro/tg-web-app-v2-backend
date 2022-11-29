@@ -4,7 +4,7 @@ const cors = require('cors')
 
 
 const token = '5490204105:AAE5vE-WFchaKaXPWhGWDOYeL1E74koedQw'
-const webAppUrl = 'http://localhost:3000'
+const webAppUrl = 'http://77.91.73.244:3000'
 
 const bot = new TelegramBot(token, {polling: true});
 const app = express()
