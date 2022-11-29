@@ -20,7 +20,7 @@ bot.on('message', async (msg) => {
         await bot.sendMessage(chatId, 'Заполни форму', {
             reply_markup: {
                 keyboard: [
-                    [{text: 'Заполни формsу', web_app: {url: webAppUrl + '/form/'}}]
+                    [{text: 'Заполни форму', web_app: {url: webAppUrl + '/form/'}}]
                 ]
             }
         })
@@ -56,10 +56,6 @@ bot.on('message', async (msg) => {
 });
 
 const PORT = 8000;
-
-app.get('/test', () => {
-    console.log('get ok')
-})
 
 app.post('/web-data', async (req, res) => {
     const {queryId, products, totalPrice} = req.body;
