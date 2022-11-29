@@ -63,8 +63,10 @@ app.get('/test', () => {
 
 app.post('/web-data', async (req, res) => {
     const {queryId, products, totalPrice} = req.body;
-    console.log('post ok')
 
+    console.log(queryId)
+
+    return res.status(200).json({})
     // try {
     //     await bot.answerWebAppQuery(queryId, {
     //         type: 'article',
