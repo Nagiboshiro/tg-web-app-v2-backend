@@ -57,11 +57,7 @@ bot.on('message', async (msg) => {
 
 const PORT = 8000;
 
-app.get('/test', async (req, res) => {
-    return res.status(200).json("okey")
-})
-
-app.post('/web-data', async (req, res) => {
+app.post('/data', async (req, res) => {
     const {queryId, products, totalPrice} = req.body;
 
     try {
