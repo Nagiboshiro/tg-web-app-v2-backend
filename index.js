@@ -52,7 +52,7 @@ bot.on('message', async (msg) => {
         }
     }
 
-    bot.sendMessage(chatId, 'Received your message');
+    bot.sendMessage(chatId, 'Received your message' + chatId);
 });
 
 const PORT = 8000;
