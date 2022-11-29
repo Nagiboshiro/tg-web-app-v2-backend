@@ -63,31 +63,31 @@ app.get('/test', () => {
 
 app.post('/web-data', async (req, res) => {
     const {queryId, products, totalPrice} = req.body;
-    console.log(req.body)
+    console.log('post ok')
 
-    try {
-        await bot.answerWebAppQuery(queryId, {
-            type: 'article',
-            id: queryId,
-            title: 'Успешная покупка',
-            input_message_content: {
-                message_text: 'Вы приобрели товар на сумму' + totalPrice
-            }
-        })
-
-        return res.status(200).json({});
-    } catch (e) {
-        await bot.answerWebAppQuery(queryId, {
-            type: 'article',
-            id: queryId,
-            title: 'Не удалость приобрести товар',
-            input_message_content: {
-                message_text: 'Не удалость приобрести товар'
-            }
-        })
-
-        return res.status(500).json({});
-    }
+    // try {
+    //     await bot.answerWebAppQuery(queryId, {
+    //         type: 'article',
+    //         id: queryId,
+    //         title: 'Успешная покупка',
+    //         input_message_content: {
+    //             message_text: 'Вы приобрели товар на сумму' + totalPrice
+    //         }
+    //     })
+    //
+    //     return res.status(200).json({});
+    // } catch (e) {
+    //     await bot.answerWebAppQuery(queryId, {
+    //         type: 'article',
+    //         id: queryId,
+    //         title: 'Не удалость приобрести товар',
+    //         input_message_content: {
+    //             message_text: 'Не удалость приобрести товар'
+    //         }
+    //     })
+    //
+    //     return res.status(500).json({});
+    // }
 })
 
 app.listen(PORT, () => console.log('server start on port ' + PORT))
